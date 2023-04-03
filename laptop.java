@@ -1,4 +1,4 @@
-public class laptop{
+public class laptop {
     private String color;
     private Integer RAM;
     private String OS;
@@ -8,56 +8,71 @@ public class laptop{
     private String model;
     private boolean isBooked = false;
 
-    public laptop(String model,Integer id, String brand){
+    public laptop(String model, Integer id, String brand) {
         this.model = model;
         this.brand = brand;
         this.id = id;
-        System.out.println("Ноутбук марки "+"'"+ this.brand+"'"+" Модель "+this.model+" С id " +Integer.toString(this.id));
+        System.out.println("Ноутбук " + "'" + this.brand + "'" + " Модель " + this.model + " id "
+                + Integer.toString(this.id));
     }
-    public String getColor(){
+
+    public String getColor() {
         return this.color;
     }
-    public Integer getRAM(){
+
+    public Integer getRAM() {
         return this.RAM;
     }
-    public String getOS(){
+
+    public String getOS() {
         return this.OS;
     }
-    public Integer getHDD(){
+
+    public Integer getHDD() {
         return this.HDD;
     }
-    public Integer getid(){
+
+    public Integer getid() {
         return this.id;
     }
-    public String getBrand(){
+
+    public String getBrand() {
         return this.brand;
     }
-    public String getModel(){
+
+    public String getModel() {
         return this.model;
     }
-    public Boolean getBooking(){
+
+    public Boolean getBooking() {
         return this.isBooked;
     }
-    public void setColor(String color){
-        this.color =color;
+
+    public void setColor(String color) {
+        this.color = color;
     }
-    public void setRAM(Integer RAM){
+
+    public void setRAM(Integer RAM) {
         this.RAM = RAM;
     }
-    public void setOS(String OS){
+
+    public void setOS(String OS) {
         this.OS = OS;
     }
-    public void setHDD(Integer HDD){
+
+    public void setHDD(Integer HDD) {
         this.HDD = HDD;
     }
-    public void Book(){
-        if (isBooked==false){
-            this.isBooked=true;
-        }
-        else System.out.println("Этот ноутбук уже зарезервирован");
+
+    public void Book() {
+        if (isBooked == false) {
+            this.isBooked = true;
+        } else
+            System.out.println("Этот ноутбук уже зарезервирован");
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Ноутбук ");
         sb.append(this.id);
@@ -68,16 +83,17 @@ public class laptop{
         sb.append(" ");
         sb.append(this.model);
         sb.append(System.lineSeparator());
-        sb.append("OS "+this.OS);
+        sb.append("OS " + this.OS);
         sb.append(System.lineSeparator());
-        sb.append("HDD "+this.HDD);
+        sb.append("HDD " + this.HDD);
         sb.append(System.lineSeparator());
-        sb.append("RAM "+this.RAM);
+        sb.append("RAM " + this.RAM);
         sb.append(System.lineSeparator());
-        if(this.isBooked==false) sb.append("Не зарезервирован");
-        else sb.append("Зарезервирован");
+        if (this.isBooked == false)
+            sb.append("Не зарезервирован");
+        else
+            sb.append("Зарезервирован");
 
-        
-        return(sb.toString());
+        return (sb.toString());
     }
 }
